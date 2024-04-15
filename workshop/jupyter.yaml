@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  myjupyter:
+    image: quay.io/jupyter/minimal-notebook:latest
+    ports:
+      - 8888:8888
+    volumes:
+      - ./work:/home/jovyan/work
+    environment:
+      - JUPYTER_TOKEN=odsc
