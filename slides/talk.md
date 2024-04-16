@@ -140,7 +140,8 @@ Have you ever:
 # More Realistic Example
 
 - Python program to read file, transform it, write file
-
+- Open `workshop` folder in vscode.
+- TODO Mermaid
 
 # Building your own image
 
@@ -163,23 +164,70 @@ Have you ever:
 
 - This is a useful way to run your programs
 - But not a very realistic method to debug them!
+- Hard to do a write run debug loop this way.
 - Enter the Visual Studio Code dev containers!
 
 # Dev containers
 
-# full example
+- Edit, Run, Debug in your container!
+- `devcontainer.json` points to an image with code + debugger
+- Normal docker build process for production deployments
+- `docker-compose build`
+- `docker-compose up`
 
+# Overview of final pipeline
 
-TODO
+- Real world pipelines require many parts
+- This example uses `docker-compose.yaml` with the dev container.
+- The `docker-compose` has a bunch of other services!
+- Pipeline watches for changes on object storage, then executes.
+- Simulator generates data, dashboard displays info.
+
+# Diagram of the pipeline
+
+- TODO in Mermaid
 
 # Running the Pipeline
 
+- Open the `workshop2` folder in a dev container.
+- look at the `docker-compose.yaml` there are TWO!
+- A `docker ps` reveals there are several services running
+- run the pipeline to try it out!
 
+# Developer flow
 
-# Developing 
+- You can debug the pipeline
+- Add breakpoints and watches
+- Last demo!
+
+# Summary
+
+- Containers virtualize our applications 
+- Bundling the dependencies with the app.
+- Find images for your containers on docker hub and quay.io
+- You can manage multiple containers with docker-compose
+- Write code inside containers with vscode dev containers!
+
+# But Wait... More Container Fun!
+- How about a containerized Spark cluster?  
+`https://github.com/mafudge/docker-spark-cluster`
+- This container uses apache Drill to SQL query your CSV files!  
+`todo`
+- Chat with your PDF file
+`todo`
 
 
 # Cleaning up
 
 - You might want to reclaim some disk space after the talk
 - `docker system prune --all --volumes`
+
+# Thank You!
+
+Introduction to Containers for Data Science / Data Engineering  
+
+Open Data Science Conference East 2024  
+
+Michael Fudge  
+mafudge@syr.edu 
+
