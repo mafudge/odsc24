@@ -2,7 +2,7 @@ version: "3"
 
 services:
   myjupyter:
-    image: quay.io/jupyter/minimal-notebook:latest
+    image: quay.io/jupyter/minimal-notebook:lab-4.1.6
     ports:
       - 8888:8888
     volumes:

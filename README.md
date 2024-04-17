@@ -3,7 +3,6 @@
 ODSC '24  
 Michael Fudge
 
-
 ## Abstract
 
 In this hands on session, participants will learn how to leverage containers for data science / data engineering workflows. Containers allows us to bundle our application dependencies and configuration into an image, which can be more easily shared with others and deployed to the cloud. The session will explain how to use and build images, configure and run them and handle inter-dependencies between the product you're building and other services such as databases.
@@ -39,7 +38,8 @@ NOTE for Mac OS Users: Go to Docker settings and make sure "Use Rosetta for x86/
 
 ### Configure Visual Studio Code Plugins
 
-TODO
+1. Visual Studio Dev Containers: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
+2. Python language support: https://marketplace.visualstudio.com/items?itemName=ms-python.python
 
 ### Clone this Github Repository
 
@@ -53,5 +53,9 @@ Pre-downloading the docker images will save us all the pain of overloading the c
 
 1. From a terminal / command prompt:
 2. `cd` into the `odsc24` folder. `$ cd odsc24`
-3. TODO docker-compose pull?
+3. Type these commands to pre-pull the images used in the workshop:
+4. `docker pull quay.io/jupyter/minimal-notebook:lab-4.1.6`
+5. `docker pull mcr.microsoft.com/devcontainers/python:1-3.11-bookworm`
+6. `docker pull python:3.11-bookworm`
+7. `docker pull minio/minio:RELEASE.2023-02-10T18-48-39Z`
 

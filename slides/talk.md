@@ -24,9 +24,9 @@ Have you ever:
 - Containers virtualize the application and its dependencies.
 - The virtualization occurs closer to the application than the hardware.
 
-# Diagram
+# Containers, Virtualization, Bare Metal
 
-- TODO: Diagram of application, virtualization,  containerization 
+![Bare Metal Virtualized Containerized comparison](bare-virt-cont.png)
 
 # Benefits of Containers
 
@@ -60,9 +60,9 @@ Have you ever:
 # First docker command:
 
 - Download an image from a registry
-- Defaults to dockerhub:  
+- Defaults to dockerhub: (skip this) 
  `docker pull jupyter/datascience-notebook:latest` 
-- Pull from another registry:  
+- Pull from another registry: (do this)
  `docker pull quay.io/jupyter/datascience-notebook:latest`
 
 # More Image Commands
@@ -75,7 +75,7 @@ Have you ever:
 # Running an image
 
 - Let's run the image:  
-`docker run --name myjupyter -d quay.io/jupyter/minimal-notebook:latest`
+`docker run --name myjupyter -d quay.io/jupyter/minimal-notebook:lab-4.1.6`
 - `--name` give the container a name
 - `-d` run in the background, return to the console.
 
@@ -95,7 +95,7 @@ Have you ever:
 - Accessing the service exposed by the application
 - `-p OUTSIDE:INSIDE`
 - In this example inside is `8888`, outside does not need to be the same.
-- `docker run --name myjupyter -d -p 8888:8888 quay.io/jupyter/minimal-notebook:latest`
+- `docker run --name myjupyter -d -p 8888:8888 quay.io/jupyter/minimal-notebook:lab-4.1.6`
 - Now a `docker ps` shows the port is exposed.
 - See for yourself: http://localhost:8888
 - find the token in the logs.
@@ -107,7 +107,7 @@ Have you ever:
     - make a file in the work folder
     - `docker stop myjupyter`
     - `docker rm myjupyter`
-    - `docker run --name myjupyter -d -p 8888:8888 quay.io/jupyter/minimal-notebook:latest`
+    - `docker run --name myjupyter -d -p 8888:8888 quay.io/jupyter/minimal-notebook:lab-4.1.6`
     - find the token in the logs
     - go back to the work folder... file its gone :-(
 
@@ -118,7 +118,7 @@ Have you ever:
 - In this example outside is `work-vol` and inside is `/home/jovyan/work` this will depend on the image.
 - Lets set the token while we are at it
 - `docker run --name myjupyter -d -p 8888:8888 -e JUPYTER_TOKEN=odsc -v work-vol:/home/jovyan/work/`
-- `  quay.io/jupyter/minimal-notebook:latest`
+- `  quay.io/jupyter/minimal-notebook:lab-4.1.6`
 
 # Volumes
 
@@ -127,7 +127,6 @@ Have you ever:
 - You can also create volumes that map to a local folder we will see this in the next example.
 - `docker volume ls`
 - `docker volume rm <vol>`
-
 
 # Too Many Commands? Try docker compose
 
@@ -141,7 +140,7 @@ Have you ever:
 
 - Python program to read file, transform it, write file
 - Open `workshop` folder in vscode.
-- TODO Mermaid
+[![](https://mermaid.ink/img/pako:eNpNjT8LwjAUxL9KeJNCK7hmcHJ0KLZb4_BMXm0g_0gTpZR-d6MF8abj-N3dAtIrAg6D8S85YkzschWOFbW99DagmxUmPMjpeWN1fWLNcdfoQEY72m_gf_JFul7hNN49RvXrbqhwUIGlaFGrcrp8UgFpJEsCeLGKBswmCRBuLSjm5NvZSeApZqoghzJIZ42PiBb4gGai9Q1yFUC0?type=png)](https://mermaid.live/edit#pako:eNpNjT8LwjAUxL9KeJNCK7hmcHJ0KLZb4_BMXm0g_0gTpZR-d6MF8abj-N3dAtIrAg6D8S85YkzschWOFbW99DagmxUmPMjpeWN1fWLNcdfoQEY72m_gf_JFul7hNN49RvXrbqhwUIGlaFGrcrp8UgFpJEsCeLGKBswmCRBuLSjm5NvZSeApZqoghzJIZ42PiBb4gGai9Q1yFUC0)
 
 # Building your own image
 
@@ -185,7 +184,7 @@ Have you ever:
 
 # Diagram of the pipeline
 
-- TODO in Mermaid
+[![](https://mermaid.ink/img/pako:eNpFjrEKwjAQhl8l3KTQCjpmcCq4OBTrZjqcydUGmqSkiVLavrspFbzp-P77fm4C6RQBh6ZzH9miD-x6E5alqR4FBmQXsuQxOF-zPD_P0pke7ahSdJDDe2blcVfqnjptab-J5elPVofNCof26dCrv3ZP7T9Yb5qwkIEhb1Cr9NC0UgGhJUMCeFoVNRi7IEDYJZ1iDK4arQQefKQMYp_aqdD48miAN9gNtHwB4slLjg?type=png)](https://mermaid.live/edit#pako:eNpFjrEKwjAQhl8l3KTQCjpmcCq4OBTrZjqcydUGmqSkiVLavrspFbzp-P77fm4C6RQBh6ZzH9miD-x6E5alqR4FBmQXsuQxOF-zPD_P0pke7ahSdJDDe2blcVfqnjptab-J5elPVofNCof26dCrv3ZP7T9Yb5qwkIEhb1Cr9NC0UgGhJUMCeFoVNRi7IEDYJZ1iDK4arQQefKQMYp_aqdD48miAN9gNtHwB4slLjg)
 
 # Running the Pipeline
 
@@ -211,8 +210,8 @@ Have you ever:
 # But Wait... More Container Fun!
 - How about a containerized Spark cluster?  
 `https://github.com/mafudge/docker-spark-cluster`
-- This container uses apache Drill to SQL query your CSV files!  
-`todo`
+- Query your CSV/Excel files with SQL 
+`https://github.com/mafudge/local-file-drill`
 - Chat with your PDF file
 `todo`
 
