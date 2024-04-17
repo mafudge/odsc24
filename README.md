@@ -25,7 +25,7 @@ Source code from the workshop will be available for attendees on github.
 
 #### NOTE:
 
-Building and running containers can require downloading large files from the internet.  We don't know what the WiFi is going to be like so this section is designed to ready your computer for the workshop in addition to minimizing the amount of internet traffic we will require in the workshop itself. 
+Building and running containers requires downloading large files from the internet.  Since we don't know what the WiFi is going to be like, this section is designed to ready your computer for the workshop. The objective is to minimize the amount of internet traffic required during the workshop itself. 
 
 ### Required software
 
