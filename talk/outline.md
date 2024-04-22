@@ -139,7 +139,8 @@ Have you ever:
 # More Realistic Example
 
 - Python program to read file, transform it, write file
-- Open `workshop` folder in vscode.
+- Open `workshop` folder in vscode.  
+
 [![](https://mermaid.ink/img/pako:eNpNjT8LwjAUxL9KeJNCK7hmcHJ0KLZb4_BMXm0g_0gTpZR-d6MF8abj-N3dAtIrAg6D8S85YkzschWOFbW99DagmxUmPMjpeWN1fWLNcdfoQEY72m_gf_JFul7hNN49RvXrbqhwUIGlaFGrcrp8UgFpJEsCeLGKBswmCRBuLSjm5NvZSeApZqoghzJIZ42PiBb4gGai9Q1yFUC0?type=png)](https://mermaid.live/edit#pako:eNpNjT8LwjAUxL9KeJNCK7hmcHJ0KLZb4_BMXm0g_0gTpZR-d6MF8abj-N3dAtIrAg6D8S85YkzschWOFbW99DagmxUmPMjpeWN1fWLNcdfoQEY72m_gf_JFul7hNN49RvXrbqhwUIGlaFGrcrp8UgFpJEsCeLGKBswmCRBuLSjm5NvZSeApZqoghzJIZ42PiBb4gGai9Q1yFUC0)
 
 # Building your own image
@@ -212,8 +213,8 @@ Have you ever:
 `https://github.com/mafudge/docker-spark-cluster`
 - Query your CSV/Excel files with SQL 
 `https://github.com/mafudge/local-file-drill`
-- Chat with your PDF file
-`todo`
+- Chat with your PDF file, 100% on device, dev container
+`https://github.com/mafudge/chat-pdf`
 
 
 # Cleaning up

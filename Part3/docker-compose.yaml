@@ -45,7 +45,6 @@ services:
     ports:
       - 8002:8502
 
-
   # Dev container
   pipeline:
     image: mcr.microsoft.com/devcontainers/python:1-3.11-bookworm

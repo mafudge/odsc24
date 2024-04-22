@@ -1,14 +1,11 @@
 Just about anything can be containerized. 
 
+- How about a containerized Spark cluster? With Jupyter for the front-end?
+`https://github.com/mafudge/docker-spark-cluster`
 
-How about a containerized Spark cluster?  
-https://github.com/mafudge/docker-spark-cluster 
-
-
-CSVSQL: This container uses apache Drill to SQL query your CSV files!  
-
-`todo`
+- Query your CSV/Excel files with SQL 
+`https://github.com/mafudge/local-file-drill`
 
 
-ChatPDF: Ollama RAG example: Chat upload a PDF and Chat with it!
-`todo`
+- Chat with your PDF file, 100% on device, dev container example
+`https://github.com/mafudge/chat-pdf`
