@@ -9,5 +9,5 @@ if __name__ == "__main__":
     data_summary = data_selection.groupby(["Dept"]).sum()
 
     print("Writing Target...")    
-    data_summary.to_csv("data/dashboarddata.csv", index=True, header=True)
+    data_summary.to_csv("data/dashboarddata2.csv", index=True, header=True)
     print(data_summary)

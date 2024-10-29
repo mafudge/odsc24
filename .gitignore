@@ -160,7 +160,7 @@ cython_debug/
 #.idea/
 
 # Minio Stuff
-workshop2/data/.minio.sys
+.minio.sys
 
 
 ~*.pptx

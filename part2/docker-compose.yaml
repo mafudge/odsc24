@@ -2,6 +2,7 @@ version: "3"
 
 services:
   pipeline:
+    
     build: ./pipeline/ #where the Dockerfile is! 
     volumes:
-      - ./data:/app/data # mount the data folder into /app/data  app is where the code is
+      - ./data:/pipeline/data # mount the data folder into /app/data  app is where the code is

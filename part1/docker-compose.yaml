@@ -1,0 +1,17 @@
+services:
+  jupyter:
+    image: quay.io/jupyter/minimal-notebook:lab-4.1.6
+    ports:
+      - 8888:8888
+    volumes:
+      - ./work:/home/jovyan/work
+    environment:
+      - JUPYTER_TOKEN=odsc
+  jupyter2:
+    image: quay.io/jupyter/minimal-notebook:lab-4.1.6
+    ports:
+      - 8889:8888
+    volumes:
+      - ./work2:/home/jovyan/work
+    environment:
+      - JUPYTER_TOKEN=odsc2

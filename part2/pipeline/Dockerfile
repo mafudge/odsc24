@@ -1,7 +1,7 @@
 FROM python:3.11-bookworm
 
-COPY . /app
-WORKDIR /app
+COPY . /pipeline
+WORKDIR /pipeline
 
 RUN pip install -r requirements.txt
     
