@@ -161,3 +161,6 @@ cython_debug/
 
 # Minio Stuff
 workshop2/data/.minio.sys
+
+
+~*.pptx

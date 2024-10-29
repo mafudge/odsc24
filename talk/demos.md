@@ -6,12 +6,16 @@ Run these commands from a terminal in the `part1` folder
 
 ## Demo 1: Pulling an image
 
+    $ docker pull hello-world
     $ docker pull jupyter/minimal-notebook:lab-4.1.6
     $ docker pull quay.io/jupyter/minimal-notebook:lab-4.1.6
     $ docker images
 
 ## Demo 2: Containers
 
+    $ docker run hello-world
+    $ docker ps
+    $ docker ps -a
     $ docker run --name jupyter -d quay.io/jupyter/minimal-notebook:lab-4.1.6
     $ docker ps
     $ docker logs jupyter
